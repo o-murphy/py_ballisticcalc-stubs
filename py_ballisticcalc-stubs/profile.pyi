@@ -39,6 +39,8 @@ from py_ballisticcalc.weapon import TwistInfo, WeaponWithTwist, ZeroInfo
 
 from py_ballisticcalc.wind import create_only_wind_info
 
+from typing import Dict
+
 
 # Variables with simple values
 
@@ -102,142 +104,167 @@ def __pyx_unpickle_Profile(*args, **kwargs): # real signature unknown
 
 class Profile(object):
     # no doc
-    def altitude(self, *args, **kwargs): # real signature unknown
+    def altitude(self) -> Distance: # real signature unknown
         pass
 
-    def bc_value(self, *args, **kwargs): # real signature unknown
+    def bc_value(self) -> float: # real signature unknown
         pass
 
-    def bullet_diameter(self, *args, **kwargs): # real signature unknown
+    def bullet_diameter(self) -> Distance: # real signature unknown
         pass
 
-    def bullet_length(self, *args, **kwargs): # real signature unknown
+    def bullet_length(self) -> Distance: # real signature unknown
         pass
 
-    def bullet_weight(self, *args, **kwargs): # real signature unknown
+    def bullet_weight(self) -> Weight: # real signature unknown
         pass
 
-    def calculate_drag_table(self, *args, **kwargs): # real signature unknown
+    def calculate_drag_table(self) -> list: # real signature unknown
         pass
 
-    def calculate_trajectory(self, *args, **kwargs): # real signature unknown
+    def calculate_trajectory(self) -> list: # real signature unknown
         pass
 
-    def custom_drag_function(self, *args, **kwargs): # real signature unknown
+    def custom_drag_function(self) -> list: # real signature unknown
         pass
 
-    def dict(self, *args, **kwargs): # real signature unknown
+    def dict(self) -> Dict: # real signature unknown
         pass
 
-    def distance_step(self, *args, **kwargs): # real signature unknown
+    def distance_step(self) -> Distance: # real signature unknown
         pass
 
-    def drag_table(self, *args, **kwargs): # real signature unknown
+    def drag_table(self) -> int: # real signature unknown
         pass
 
-    def humidity(self, *args, **kwargs): # real signature unknown
+    def humidity(self) -> float: # real signature unknown
         pass
 
-    def maximum_distance(self, *args, **kwargs): # real signature unknown
+    def maximum_distance(self) -> Distance: # real signature unknown
         pass
 
-    def maximum_step_size(self, *args, **kwargs): # real signature unknown
+    def maximum_step_size(self) -> Distance: # real signature unknown
         pass
 
-    def muzzle_velocity(self, *args, **kwargs): # real signature unknown
+    def muzzle_velocity(self) -> Velocity: # real signature unknown
         pass
 
-    def pressure(self, *args, **kwargs): # real signature unknown
+    def pressure(self) -> Pressure: # real signature unknown
         pass
 
-    def set_altitude(self, *args, **kwargs): # real signature unknown
+    def set_altitude(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_bc_value(self, *args, **kwargs): # real signature unknown
+    def set_bc_value(self, value: float) -> None: # real signature unknown
         pass
 
-    def set_bullet_diameter(self, *args, **kwargs): # real signature unknown
+    def set_bullet_diameter(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_bullet_length(self, *args, **kwargs): # real signature unknown
+    def set_bullet_length(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_bullet_weight(self, *args, **kwargs): # real signature unknown
+    def set_bullet_weight(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_custom_drag_function(self, *args, **kwargs): # real signature unknown
+    def set_custom_drag_function(self, data: list[Dict[str, float]]) -> None: # real signature unknown
         pass
 
-    def set_distance_step(self, *args, **kwargs): # real signature unknown
+    def set_distance_step(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_drag_table(self, *args, **kwargs): # real signature unknown
+    def set_drag_table(self, drag_table: int) -> None: # real signature unknown
         pass
 
-    def set_humidity(self, *args, **kwargs): # real signature unknown
+    def set_humidity(self, value: float) -> None: # real signature unknown
         pass
 
-    def set_maximum_distance(self, *args, **kwargs): # real signature unknown
+    def set_maximum_distance(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_maximum_step_size(self, *args, **kwargs): # real signature unknown
+    def set_maximum_step_size(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_muzzle_velocity(self, *args, **kwargs): # real signature unknown
+    def set_muzzle_velocity(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_pressure(self, *args, **kwargs): # real signature unknown
+    def set_pressure(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_sight_angle(self, *args, **kwargs): # real signature unknown
+    def set_sight_angle(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_sight_height(self, *args, **kwargs): # real signature unknown
+    def set_sight_height(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_temperature(self, *args, **kwargs): # real signature unknown
+    def set_temperature(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_twist(self, *args, **kwargs): # real signature unknown
+    def set_twist(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_twist_direction(self, *args, **kwargs): # real signature unknown
+    def set_twist_direction(self, direction: int) -> None: # real signature unknown
         pass
 
-    def set_wind_direction(self, *args, **kwargs): # real signature unknown
+    def set_wind_direction(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_wind_velocity(self, *args, **kwargs): # real signature unknown
+    def set_wind_velocity(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def set_zero_distance(self, *args, **kwargs): # real signature unknown
+    def set_zero_distance(self, value: float, units: int) -> None: # real signature unknown
         pass
 
-    def sight_angle(self, *args, **kwargs): # real signature unknown
+    def sight_angle(self) -> Angular: # real signature unknown
         pass
 
-    def sight_height(self, *args, **kwargs): # real signature unknown
+    def sight_height(self) -> Distance: # real signature unknown
         pass
 
-    def temperature(self, *args, **kwargs): # real signature unknown
+    def temperature(self) -> Temperature: # real signature unknown
         pass
 
-    def twist(self, *args, **kwargs): # real signature unknown
+    def twist(self) -> Distance: # real signature unknown
         pass
 
-    def twist_direction(self, *args, **kwargs): # real signature unknown
+    def twist_direction(self) -> int: # real signature unknown
         pass
 
-    def wind_direction(self, *args, **kwargs): # real signature unknown
+    def wind_direction(self) -> Angular: # real signature unknown
         pass
 
-    def wind_velocity(self, *args, **kwargs): # real signature unknown
+    def wind_velocity(self) -> Velocity: # real signature unknown
         pass
 
-    def zero_distance(self, *args, **kwargs): # real signature unknown
+    def zero_distance(self) -> Distance: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self,
+                 bc_value: float = 0.223,
+                 drag_table: int = DragTableG7,
+                 bullet_diameter: (float, int) = (0.308, DistanceInch),
+                 bullet_length: (float, int) = (1.2, DistanceInch),
+                 bullet_weight: (float, int) = (167, WeightGrain),
+                 muzzle_velocity: (float, int) = (800, VelocityMPS),
+                 altitude: (float, int) = (0, DistanceMeter),
+                 pressure: (float, int) = (760, PressureMmHg),
+                 temperature: (float, int) = (15, TemperatureCelsius),
+                 humidity: float = 0.5,
+                 zero_distance: (float, int) = (100, DistanceMeter),
+                 twist: (float, int) = (11, DistanceInch),
+                 twist_direction: int = TwistRight,
+                 sight_height: (float, int) = (90, DistanceMillimeter),
+                 sight_angle: (float, int) = (0, AngularMOA),
+                 maximum_distance: (float, int) = (1001, DistanceMeter),
+                 distance_step: (float, int) = (100, DistanceMeter),
+                 wind_velocity: (float, int) = (0, VelocityKMH),
+                 wind_direction: (float, int) = (0, AngularDegree),
+                 maximum_step_size: (float, int) = (1, DistanceFoot),
+                 shot_angle: (float, int) = (0, AngularRadian),
+                 cant_angle: (float, int) = (0, AngularRadian),
+                 custom_drag_function=None,
+                 multiple_bc_table=None
+                 ): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

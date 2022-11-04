@@ -75,13 +75,13 @@ WeightPound = 73
 
 # functions
 
-def create_no_wind(*args, **kwargs): # real signature unknown
+def create_no_wind() -> list[WindInfo]: # real signature unknown
     pass
 
-def create_only_wind_info(*args, **kwargs): # real signature unknown
+def create_only_wind_info(wind_velocity: Velocity, direction: Angular) -> list[WindInfo]: # real signature unknown
     pass
 
-def create_wind_info(*args, **kwargs): # real signature unknown
+def create_wind_info(*winds: WindInfo) -> list[WindInfo]: # real signature unknown
     pass
 
 def __pyx_unpickle_WindInfo(*args, **kwargs): # real signature unknown
@@ -91,16 +91,17 @@ def __pyx_unpickle_WindInfo(*args, **kwargs): # real signature unknown
 
 class WindInfo(object):
     # no doc
-    def direction(self, *args, **kwargs): # real signature unknown
+    def direction(self) -> Angular: # real signature unknown
         pass
 
-    def until_distance(self, *args, **kwargs): # real signature unknown
+    def until_distance(self) -> Distance: # real signature unknown
         pass
 
-    def velocity(self, *args, **kwargs): # real signature unknown
+    def velocity(self) -> Velocity: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, until_distance: Distance = None,
+                 velocity: Velocity = None, direction: Angular = None): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -120,7 +121,7 @@ class WindInfo(object):
     def __setstate__(self, *args, **kwargs): # real signature unknown
         pass
 
-    def __str__(self, *args, **kwargs): # real signature unknown
+    def __str__(self, *args, **kwargs) -> str: # real signature unknown
         """ Return str(self). """
         pass
 

@@ -10,40 +10,85 @@ def __pyx_unpickle_Vector(*args, **kwargs): # real signature unknown
 
 class Vector(object):
     # no doc
-    def add(self, *args, **kwargs): # real signature unknown
+    def add(self, v2: Vector) -> Vector: # real signature unknown
+        """
+        Adds two vectors
+        :param v2: Vector(x2, y2, z2)
+        :return: sum of two vectors
+        """
         pass
 
-    def copy(self, *args, **kwargs): # real signature unknown
+    def copy(self) -> Vector: # real signature unknown
+        """
+        Creates a copy of the vector
+        :return: Vector
+        """
         pass
 
-    def magnitude(self, *args, **kwargs): # real signature unknown
+    def magnitude(self) -> float: # real signature unknown
+        """
+        Returns a magnitude of the vector
+        The magnitude of the vector is the length of a line that starts in point (0,0,0)
+        and ends in the point set by the vector coordinates
+        :return: magnitude of the vector
+        """
         pass
 
-    def multiply_by_const(self, *args, **kwargs): # real signature unknown
+    def multiply_by_const(self, a: float) -> Vector: # real signature unknown
+        """
+        Multiplies the vector by the constant
+        :param a: float multiplier
+        :return: Vector
+        """
         pass
 
-    def multiply_by_vector(self, *args, **kwargs): # real signature unknown
+    def multiply_by_vector(self, v2: Vector) -> float: # real signature unknown
+        """
+        Returns a product of two vectors
+        The product of two vectors is a sum of products of each coordinate
+        :param v2: Vector(x2, y2, z2)
+        :return: float
+        """
         pass
 
-    def negate(self, *args, **kwargs): # real signature unknown
+    def negate(self) -> Vector: # real signature unknown
+        """
+        Returns a vector which is symmetrical to this vector vs (0,0,0) point
+        :return: Vector
+        """
         pass
 
-    def normalize(self, *args, **kwargs): # real signature unknown
+    def normalize(self) -> Vector: # real signature unknown
+        """
+        Returns a vector of magnitude one which is collinear to this vector
+        :return: Vector
+        """
         pass
 
-    def subtract(self, *args, **kwargs): # real signature unknown
+    def subtract(self, v2: Vector) -> Vector: # real signature unknown
+        """
+        Subtracts one vector from another
+        :param v2: Vector(x2, y2, z2)
+        :return: Vector
+        """
         pass
 
-    def x(self, *args, **kwargs): # real signature unknown
+    def x(self) -> float: # real signature unknown
         pass
 
-    def y(self, *args, **kwargs): # real signature unknown
+    def y(self) -> float: # real signature unknown
         pass
 
-    def z(self, *args, **kwargs): # real signature unknown
+    def z(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, x: float, y: float, z: float): # real signature unknown
+        """
+        Create create a vector from its coordinates
+        :param x: X-coordinate
+        :param y: Y-coordinate
+        :param z: Z-coordinate
+        """
         pass
 
     @staticmethod # known case of __new__
@@ -63,8 +108,11 @@ class Vector(object):
     def __setstate__(self, *args, **kwargs): # real signature unknown
         pass
 
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+    def __str__(self) -> str: # real signature unknown
+        """
+        Converts a vector into a string
+        :return: formatted string [X, Y, Z]
+        """
         pass
 
     __pyx_vtable__ = None # (!) real value is '<capsule object NULL at 0x0000015AE51C4930>'

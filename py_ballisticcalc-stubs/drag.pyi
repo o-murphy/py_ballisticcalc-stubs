@@ -83,16 +83,16 @@ WeightPound = 73
 
 # functions
 
-def calculate_by_curve(*args, **kwargs): # real signature unknown
+def calculate_by_curve(data: list, curve: list, mach: float) -> float: # real signature unknown
     pass
 
-def calculate_curve(*args, **kwargs): # real signature unknown
+def calculate_curve(data_points: list) -> list: # real signature unknown
     pass
 
-def load_drag_table(*args, **kwargs): # real signature unknown
+def load_drag_table(drag_table: int) -> list: # real signature unknown
     pass
 
-def make_data_points(*args, **kwargs): # real signature unknown
+def make_data_points(drag_table: list) -> list: # real signature unknown
     pass
 
 def __pyx_unpickle_BallisticCoefficient(*args, **kwargs): # real signature unknown
@@ -108,28 +108,28 @@ def __pyx_unpickle_DataPoint(*args, **kwargs): # real signature unknown
 
 class BallisticCoefficient(object):
     # no doc
-    def calculated_cd(self, *args, **kwargs): # real signature unknown
+    def calculated_cd(self, mach: float) -> float: # real signature unknown
         pass
 
-    def calculated_drag_function(self, *args, **kwargs): # real signature unknown
+    def calculated_drag_function(self) -> list: # real signature unknown
         pass
 
-    def drag(self, *args, **kwargs): # real signature unknown
+    def drag(self, mach: float) -> float: # real signature unknown
         pass
 
-    def form_factor(self, *args, **kwargs): # real signature unknown
+    def form_factor(self) -> float: # real signature unknown
         pass
 
-    def standard_cd(self, *args, **kwargs): # real signature unknown
+    def standard_cd(self, mach: float) -> float: # real signature unknown
         pass
 
-    def table(self, *args, **kwargs): # real signature unknown
+    def table(self) -> int: # real signature unknown
         pass
 
-    def value(self, *args, **kwargs): # real signature unknown
+    def value(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, value: float, drag_table: int, weight: Weight, diameter: Distance, custom_drag_table: list): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -154,16 +154,16 @@ class BallisticCoefficient(object):
 
 class CurvePoint(object):
     # no doc
-    def a(self, *args, **kwargs): # real signature unknown
+    def a(self) -> float: # real signature unknown
         pass
 
-    def b(self, *args, **kwargs): # real signature unknown
+    def b(self) -> float: # real signature unknown
         pass
 
-    def c(self, *args, **kwargs): # real signature unknown
+    def c(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, a: float, b: float, c: float): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -188,13 +188,13 @@ class CurvePoint(object):
 
 class DataPoint(object):
     # no doc
-    def a(self, *args, **kwargs): # real signature unknown
+    def a(self) -> float: # real signature unknown
         pass
 
-    def b(self, *args, **kwargs): # real signature unknown
+    def b(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, a: float, b: float): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

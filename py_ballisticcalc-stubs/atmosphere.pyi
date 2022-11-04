@@ -93,14 +93,6 @@ WeightNewton = 75
 WeightOunce = 71
 WeightPound = 73
 
-# functions
-
-def IcaoAtmosphere(*args, **kwargs): # real signature unknown
-    pass
-
-def __pyx_unpickle_Atmosphere(*args, **kwargs): # real signature unknown
-    pass
-
 # classes
 
 class Atmosphere(object):
@@ -108,34 +100,34 @@ class Atmosphere(object):
     def altitude(self, *args, **kwargs): # real signature unknown
         pass
 
-    def create_default(self, *args, **kwargs): # real signature unknown
+    def create_default(self) -> None: # real signature unknown
         pass
 
-    def density(self, *args, **kwargs): # real signature unknown
+    def density(self) -> float: # real signature unknown
         pass
 
-    def density_factor(self, *args, **kwargs): # real signature unknown
+    def density_factor(self) -> float: # real signature unknown
         pass
 
-    def get_density_factor_and_mach_for_altitude(self, *args, **kwargs): # real signature unknown
+    def get_density_factor_and_mach_for_altitude(self, altitude: float) -> (float, float): # real signature unknown
         pass
 
-    def humidity(self, *args, **kwargs): # real signature unknown
+    def humidity(self) -> float: # real signature unknown
         pass
 
-    def humidity_in_percent(self, *args, **kwargs): # real signature unknown
+    def humidity_in_percent(self) -> float: # real signature unknown
         pass
 
-    def mach(self, *args, **kwargs): # real signature unknown
+    def mach(self) -> Velocity: # real signature unknown
         pass
 
-    def pressure(self, *args, **kwargs): # real signature unknown
+    def pressure(self) -> Pressure: # real signature unknown
         pass
 
-    def temperature(self, *args, **kwargs): # real signature unknown
+    def temperature(self) -> Temperature: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, altitude: Distance, pressure: Pressure, temperature: Temperature, humidity: float): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -155,11 +147,20 @@ class Atmosphere(object):
     def __setstate__(self, *args, **kwargs): # real signature unknown
         pass
 
-    def __str__(self, *args, **kwargs): # real signature unknown
+    def __str__(self) -> str: # real signature unknown
         """ Return str(self). """
         pass
 
     __pyx_vtable__ = None # (!) real value is '<capsule object NULL at 0x000001FC697F4990>'
+
+
+# functions
+
+def IcaoAtmosphere(altitude: Distance) -> Atmosphere: # real signature unknown
+    pass
+
+def __pyx_unpickle_Atmosphere(*args, **kwargs): # real signature unknown
+    pass
 
 
 # variables with complex values

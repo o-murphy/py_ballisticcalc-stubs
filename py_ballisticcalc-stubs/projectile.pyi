@@ -99,13 +99,13 @@ def __pyx_unpickle_ProjectileWithDimensions(*args, **kwargs): # real signature u
 
 class Ammunition(object):
     # no doc
-    def bullet(self, *args, **kwargs): # real signature unknown
+    def bullet(self) -> Projectile: # real signature unknown
         pass
 
-    def muzzle_velocity(self, *args, **kwargs): # real signature unknown
+    def muzzle_velocity(self) -> Velocity: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, bullet: Projectile, muzzle_velocity: Velocity): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -130,22 +130,22 @@ class Ammunition(object):
 
 class Projectile(object):
     # no doc
-    def ballistic_coefficient(self, *args, **kwargs): # real signature unknown
+    def ballistic_coefficient(self) -> BallisticCoefficient: # real signature unknown
         pass
 
-    def bullet_diameter(self, *args, **kwargs): # real signature unknown
+    def bullet_diameter(self) -> Distance: # real signature unknown
         pass
 
-    def bullet_length(self, *args, **kwargs): # real signature unknown
+    def bullet_length(self) -> Distance: # real signature unknown
         pass
 
-    def bullet_weight(self, *args, **kwargs): # real signature unknown
+    def bullet_weight(self) -> Weight: # real signature unknown
         pass
 
     def has_dimensions(self, *args, **kwargs): # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, ballistic_coefficient: BallisticCoefficient, weight: Weight): # real signature unknown
         """
         projectile description with dimensions
                 :param ballistic_coefficient: BallisticCoefficient instance
@@ -175,7 +175,10 @@ class Projectile(object):
 
 class ProjectileWithDimensions(Projectile):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, ballistic_coefficient: BallisticCoefficient,
+                 bullet_diameter: Distance,
+                 bullet_length: Distance,
+                 weight: Weight): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

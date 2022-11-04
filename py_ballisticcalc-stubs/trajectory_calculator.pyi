@@ -97,19 +97,20 @@ def __pyx_unpickle_TrajectoryCalculator(*args, **kwargs): # real signature unkno
 
 class TrajectoryCalculator(object):
     # no doc
-    def maximum_calculator_step_size(self, *args, **kwargs): # real signature unknown
+    def maximum_calculator_step_size(self) -> Distance: # real signature unknown
         pass
 
-    def set_maximum_calculator_step_size(self, *args, **kwargs): # real signature unknown
+    def set_maximum_calculator_step_size(self, value: Distance) -> None: # real signature unknown
         pass
 
-    def sight_angle(self, *args, **kwargs): # real signature unknown
+    def sight_angle(self, ammunition: Ammunition, weapon: Weapon, atmosphere: Atmosphere) -> Angular: # real signature unknown
         pass
 
-    def trajectory(self, *args, **kwargs): # real signature unknown
+    def trajectory(self, ammunition: Ammunition, weapon: Weapon, atmosphere: Atmosphere,
+                   shot_info: ShotParameters, wind_info: list[WindInfo]) -> list[TrajectoryData]: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

@@ -85,22 +85,22 @@ def __pyx_unpickle_ShotParametersUnlevel(*args, **kwargs): # real signature unkn
 
 class ShotParameters(object):
     # no doc
-    def cant_angle(self, *args, **kwargs): # real signature unknown
+    def cant_angle(self) -> Angular: # real signature unknown
         pass
 
-    def maximum_distance(self, *args, **kwargs): # real signature unknown
+    def maximum_distance(self) -> Distance: # real signature unknown
         pass
 
-    def shot_angle(self, *args, **kwargs): # real signature unknown
+    def shot_angle(self) -> Angular: # real signature unknown
         pass
 
-    def sight_angle(self, *args, **kwargs): # real signature unknown
+    def sight_angle(self) -> Angular: # real signature unknown
         pass
 
-    def step(self, *args, **kwargs): # real signature unknown
+    def step(self) -> Distance: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, sight_angle: Angular, maximum_distance: Distance, step: Distance): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -125,7 +125,8 @@ class ShotParameters(object):
 
 class ShotParametersUnlevel(ShotParameters):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, sight_angle: Angular, maximum_distance: Distance,
+                 step: Distance, shot_angle: Angular, cant_angle: Angular): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

@@ -88,16 +88,16 @@ def __pyx_unpickle_MultipleBallisticCoefficient(*args, **kwargs): # real signatu
 
 class BCDataPoint(object):
     # no doc
-    def bc(self, *args, **kwargs): # real signature unknown
+    def bc(self) -> float: # real signature unknown
         pass
 
-    def set_v(self, *args, **kwargs): # real signature unknown
+    def set_v(self, value: float) -> None: # real signature unknown
         pass
 
-    def v(self, *args, **kwargs): # real signature unknown
+    def v(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, bc: float, v: float): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -122,10 +122,11 @@ class BCDataPoint(object):
 
 class MultipleBallisticCoefficient(object):
     # no doc
-    def custom_drag_func(self, *args, **kwargs): # real signature unknown
+    def custom_drag_func(self) -> list: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, drag_table: int, diameter: Distance, weight: Weight,
+                 multiple_bc_table: list[(float, float)], velocity_units_flag: int): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

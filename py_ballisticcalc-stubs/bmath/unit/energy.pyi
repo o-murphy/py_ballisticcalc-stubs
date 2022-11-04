@@ -15,19 +15,43 @@ def __pyx_unpickle_Energy(*args, **kwargs): # real signature unknown
 
 class Energy(object):
     # no doc
-    def convert(self, *args, **kwargs): # real signature unknown
+    def convert(self, units: int) -> Energy: # real signature unknown
+        """
+        Returns the value into the specified units
+        :param units: Units consts
+        :return: Units object in the specified units
+        """
         pass
 
-    def get_in(self, *args, **kwargs): # real signature unknown
+    def get_in(self, units: int) -> float: # real signature unknown
+        """
+        Converts the value in the specified units.
+        Returns 0 if unit conversion is not possible.
+        :param units: Units consts
+        :return: float
+        """
         pass
 
-    def units(self, *args, **kwargs): # real signature unknown
+    def units(self) -> int: # real signature unknown
+        """
+        :return: default units
+        """
         pass
 
-    def value(self, *args, **kwargs): # real signature unknown
+    def value(self, units: int) -> float: # real signature unknown
+        """
+        :param units: Units consts
+        :return: Value of the unit in the specified units
+        """
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, value: float, units: int): # real signature unknown
+        """
+        Creates a units value, strongly recommended validate it with validate() method
+        usage example: Convertor(value, units).validate()
+        :param value: units value
+        :param units: UnitsConvertor constsS
+        """
         pass
 
     @staticmethod # known case of __new__
@@ -47,8 +71,10 @@ class Energy(object):
     def __setstate__(self, *args, **kwargs): # real signature unknown
         pass
 
-    def __str__(self, *args, **kwargs): # real signature unknown
-        """ Return str(self). """
+    def __str__(self) -> str: # real signature unknown
+        """
+        :return: formatted value in default units
+        """
         pass
 
     __pyx_vtable__ = None # (!) real value is '<capsule object NULL at 0x000002C03ED45590>'

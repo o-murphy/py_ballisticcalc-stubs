@@ -110,13 +110,13 @@ def __pyx_unpickle_ZeroInfoWithAtmosphere(*args, **kwargs): # real signature unk
 
 class TwistInfo(object):
     # no doc
-    def direction(self, *args, **kwargs): # real signature unknown
+    def direction(self) -> int: # real signature unknown
         pass
 
-    def twist(self, *args, **kwargs): # real signature unknown
+    def twist(self) -> Distance: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, direction: int, twist: Distance): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -141,25 +141,26 @@ class TwistInfo(object):
 
 class Weapon(object):
     # no doc
-    def click_value(self, *args, **kwargs): # real signature unknown
+    def click_value(self) -> Angular: # real signature unknown
         pass
 
-    def has_twist(self, *args, **kwargs): # real signature unknown
+    def has_twist(self) -> bool: # real signature unknown
         pass
 
-    def set_click_value(self, *args, **kwargs): # real signature unknown
+    def set_click_value(self, click: Angular) -> None: # real signature unknown
         pass
 
-    def sight_height(self, *args, **kwargs): # real signature unknown
+    def sight_height(self) -> Distance: # real signature unknown
         pass
 
-    def twist(self, *args, **kwargs): # real signature unknown
+    def twist(self) -> Distance: # real signature unknown
         pass
 
-    def zero(self, *args, **kwargs): # real signature unknown
+    def zero(self) -> ZeroInfo: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, sight_height: Distance, zero_info: ZeroInfo,
+                 has_twist_info: bool = False, twist: TwistInfo = None, click_value: Angular = None): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -184,7 +185,7 @@ class Weapon(object):
 
 class WeaponWithTwist(Weapon):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, sight_height: Distance, zero_info: ZeroInfo, twist: TwistInfo): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -209,22 +210,26 @@ class WeaponWithTwist(Weapon):
 
 class ZeroInfo(object):
     # no doc
-    def ammunition(self, *args, **kwargs): # real signature unknown
+    def ammunition(self) -> Ammunition: # real signature unknown
         pass
 
-    def atmosphere(self, *args, **kwargs): # real signature unknown
+    def atmosphere(self) -> Atmosphere: # real signature unknown
         pass
 
-    def has_ammunition(self, *args, **kwargs): # real signature unknown
+    def has_ammunition(self) -> bool: # real signature unknown
         pass
 
-    def has_atmosphere(self, *args, **kwargs): # real signature unknown
+    def has_atmosphere(self) -> bool: # real signature unknown
         pass
 
-    def zero_distance(self, *args, **kwargs): # real signature unknown
+    def zero_distance(self) -> Distance: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, distance: Distance,
+                 has_ammunition: bool = False,
+                 has_atmosphere: bool = False,
+                 ammunition: Ammunition = None,
+                 atmosphere: Atmosphere = None): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -249,7 +254,7 @@ class ZeroInfo(object):
 
 class ZeroInfoDef(ZeroInfo):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, distance: Distance): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -274,7 +279,7 @@ class ZeroInfoDef(ZeroInfo):
 
 class ZeroInfoWithAmmo(ZeroInfo):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, distance: Distance, ammo: Ammunition): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -299,7 +304,7 @@ class ZeroInfoWithAmmo(ZeroInfo):
 
 class ZeroInfoWithAmmoAndAtmo(ZeroInfo):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, distance: Distance, ammo: Ammunition, atmosphere: Atmosphere): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -324,7 +329,7 @@ class ZeroInfoWithAmmoAndAtmo(ZeroInfo):
 
 class ZeroInfoWithAtmosphere(ZeroInfo):
     # no doc
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, distance: Distance, atmosphere: Atmosphere): # real signature unknown
         pass
 
     @staticmethod # known case of __new__

@@ -85,16 +85,16 @@ def __pyx_unpickle_TrajectoryData(*args, **kwargs): # real signature unknown
 
 class Timespan(object):
     # no doc
-    def minutes(self, *args, **kwargs): # real signature unknown
+    def minutes(self) -> float: # real signature unknown
         pass
 
-    def seconds(self, *args, **kwargs): # real signature unknown
+    def seconds(self) -> float: # real signature unknown
         pass
 
-    def total_seconds(self, *args, **kwargs): # real signature unknown
+    def total_seconds(self) -> float: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, time: float): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
@@ -119,37 +119,46 @@ class Timespan(object):
 
 class TrajectoryData(object):
     # no doc
-    def drop(self, *args, **kwargs): # real signature unknown
+    def drop(self) -> Distance: # real signature unknown
         pass
 
-    def drop_adjustment(self, *args, **kwargs): # real signature unknown
+    def drop_adjustment(self) -> [Angular, None]: # real signature unknown
         pass
 
-    def energy(self, *args, **kwargs): # real signature unknown
+    def energy(self) -> Energy: # real signature unknown
         pass
 
-    def mach_velocity(self, *args, **kwargs): # real signature unknown
+    def mach_velocity(self) -> float: # real signature unknown
         pass
 
-    def optimal_game_weight(self, *args, **kwargs): # real signature unknown
+    def optimal_game_weight(self) -> Weight: # real signature unknown
         pass
 
-    def time(self, *args, **kwargs): # real signature unknown
+    def time(self) -> Timespan: # real signature unknown
         pass
 
-    def travelled_distance(self, *args, **kwargs): # real signature unknown
+    def travelled_distance(self) -> Distance: # real signature unknown
         pass
 
-    def velocity(self, *args, **kwargs): # real signature unknown
+    def velocity(self) -> Velocity: # real signature unknown
         pass
 
-    def windage(self, *args, **kwargs): # real signature unknown
+    def windage(self) -> Distance: # real signature unknown
         pass
 
-    def windage_adjustment(self, *args, **kwargs): # real signature unknown
+    def windage_adjustment(self) -> [Angular, None]: # real signature unknown
         pass
 
-    def __init__(self, *args, **kwargs): # real signature unknown
+    def __init__(self, time: Timespan,
+                 travel_distance: Distance,
+                 velocity: Velocity,
+                 mach: float,
+                 drop: Distance,
+                 drop_adjustment: [Angular, None],
+                 windage: Distance,
+                 windage_adjustment: [Angular, None],
+                 energy: Energy,
+                 optimal_game_weight: Weight): # real signature unknown
         pass
 
     @staticmethod # known case of __new__
